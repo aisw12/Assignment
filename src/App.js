@@ -10,7 +10,7 @@ const App = () => {
   const [tasks, setTasks] = useState([]);
   const [showModal, setShowModal] = useState(false);
 
-  // Fetch tasks from the mock API
+  
   useEffect(() => {
     const fetchTasks = async () => {
       try {
@@ -25,13 +25,13 @@ const App = () => {
     fetchTasks();
   }, []);
 
-  // Handle drag start event
+ 
   const handleDragStart = (e, task, columnId) => {
     e.dataTransfer.setData('taskId', task.id);
     e.dataTransfer.setData('sourceColumn', columnId);
   };
 
-  // Handle drop event
+ 
   const handleDrop = async (e, destinationColumn) => {
     e.preventDefault();
 
@@ -51,7 +51,6 @@ const App = () => {
     setTasks(updatedTasks);
   };
 
-  // Handle adding a new task
   const handleAddTask = async (newTask) => {
     const response = await axios.post(API_URL, newTask);
     setTasks([...tasks, response.data]);

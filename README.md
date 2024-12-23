@@ -66,33 +66,3 @@ The backend is implemented using JSON Server, a mock REST API tool that serves d
 Key Features:
 Task Data: The backend stores tasks in a JSON file (db.json). Each task has fields like id, title, description, and status.
 
-Self Evaluation
-
-Good-
-
-Functionality: The project provides a Kanban-style task management dashboard . The tasks are fetched from a mock API and displayed dynamically, with the ability to drag and drop tasks between columns.
-
-API Integration: I integrated a mock REST API using axios to handle the  tasks and allowing tasks to be added, fetched, and moved between columns efficiently.
-
-Responsive Design: The application was designed to be responsive for better usability across devices, ensuring that the layout adjusts to different screen sizes, which is an important aspect of user experience.
-
-Bad
-
-UI/UX: The current UI could be enhanced with more polished visuals and clearer user feedback. For example, when tasks are successfully moved, there could be a notification or animation to indicate the action was successful.
-
-Areas of improvement
-
-Security: Even though it's a mock API, security concerns should be considered, such as handling sensitive data properly (e.g., password storage or tokens), even if it's only a small part of a larger production app.
-
-
-Self-Criticism: Be critical of your own code! Highlight any shortcomings you noticed.
-Hardcoded Values:
- Some values, like the task status options ("To Do", "In Progress", "Done"), are hardcoded in the components. If I wanted to scale the app or make it more customizable (e.g., adding custom task statuses), it would require a refactor. A better approach would be to centralize such data and map over it to generate the UI dynamically.
- Minimal Styling: 
- The styling for the app is quite basic and could benefit from a more consistent and modern design. Using CSS frameworks like Tailwind CSS or Material-UI could speed up styling and improve the overall aesthetics.
-
- Technology Rating:
- React JS:9/10
- JavaScript:9/10;
- HTML:9/10;
- CSS:9/10

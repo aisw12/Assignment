@@ -3,9 +3,9 @@ import React, { useState } from 'react';
 const TaskModal = ({ onClose, onSave }) => {
   const [taskTitle, setTaskTitle] = useState('');
   const [taskDescription, setTaskDescription] = useState('');
-  const [taskStatus, setTaskStatus] = useState('To Do'); // Default status is 'To Do'
+  const [taskStatus, setTaskStatus] = useState('To Do'); 
 
-  // Handle form submission
+  
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -14,22 +14,16 @@ const TaskModal = ({ onClose, onSave }) => {
       return;
     }
 
-    // Create a new task object
+    
     const newTask = {
       title: taskTitle,
       description: taskDescription,
       status: taskStatus,
     };
-
-    // Save the new task using the onSave function passed via props
     onSave(newTask);
-
-    // Clear the form
     setTaskTitle('');
     setTaskDescription('');
     setTaskStatus('To Do');
-
-    // Close the modal
     onClose();
   };
 
