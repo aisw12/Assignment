@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+Steps to run the application locally
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1.Open the VS code and then open a empty folder
+2.Inside the folder in the terminal give this command git clone "https://github.com/aisw12/Assignment.git"
+3.After that cd tab Assignment the path will be folder/Assignment 
+4.For installing all dependencies npm i
+5.Open the json servor using  json-server --watch db.json --port 5000
+6.While opening this "http://localhost:5000/tasks" in server all the tasks will be visible in the server
+7.Start the server using npm start
+8.Task Management dashboard will be visible in localhost:3000
+9.Add  new task button is there ,while clicking on it a modal will appear where you can add  a task in todo,pending and done status
+10.You can able to drag items between To -do,pending and Done status.
+11.All the items added manually will automatically get updated in the backend.
 
-## Available Scripts
 
-In the project directory, you can run:
+Self Evaluation
 
-### `npm start`
+Good
+Functionality: The project provides a Kanban-style task management dashboard . The tasks are fetched from a mock API and displayed dynamically, with the ability to drag and drop tasks between columns.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+API Integration: I integrated a mock REST API using axios to handle the fetching and updating of tasks. The CRUD operations (Create, Read, Update, Delete) are functional, allowing tasks to be added, fetched, and moved between columns efficiently.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Responsive Design: The application was designed to be responsive for better usability across devices, ensuring that the layout adjusts to different screen sizes, which is an important aspect of user experience.
 
-### `npm test`
+Bad
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+UI/UX: The current UI could be enhanced with more polished visuals and clearer user feedback. For example, when tasks are successfully moved, there could be a notification or animation to indicate the action was successful.
 
-### `npm run build`
+Areas of improvement
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Security: Even though it's a mock API, security concerns should be considered, such as handling sensitive data properly (e.g., password storage or tokens), even if it's only a small part of a larger production app.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Self-Criticism: Be critical of your own code! Highlight any shortcomings you noticed.
+Hardcoded Values:
+ Some values, like the task status options ("To Do", "In Progress", "Done"), are hardcoded in the components. If I wanted to scale the app or make it more customizable (e.g., adding custom task statuses), it would require a refactor. A better approach would be to centralize such data and map over it to generate the UI dynamically.
+ Minimal Styling: 
+ The styling for the app is quite basic and could benefit from a more consistent and modern design. Using CSS frameworks like Tailwind CSS or Material-UI could speed up styling and improve the overall aesthetics.

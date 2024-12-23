@@ -60,7 +60,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1>Task Management Dashboard</h1>
+      <h1 style={{textAlign:"center"}}>Task Management Dashboard</h1>
       <button onClick={() => setShowModal(true)}>Add New Task</button>
 
       <div className="kanban-board">
